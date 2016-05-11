@@ -1,0 +1,181 @@
+<html>
+<head>
+<title>User Registration</title>
+<link rel="Stylesheet" href="reg.css">
+</head>
+<body>
+
+<div id="patch">
+<img src="logo.jpg" height="60" width="150"><hr>
+<span id="one">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="home.php"><font color="white">Home</font></a></span>
+
+<span id="one">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mobile.php"><font color="white">Mobile</font></a></span>
+
+<span id="one">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="camera.php"><font color="white">Camera</font></a></span>
+
+<span id="one">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="login.html"><font color="white">Login</font></a></span>
+
+<span id="one">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Adlogin.html"><font color="white">Admin Login</font></a></span><br><br><br>
+
+</div>
+<br><br>
+ <form action="register.php" method="post" name="myForm" id="myForm" onSubmit="validator()">
+      <table cellspacing="2" cellpadding="2" border="1">
+        <tr>
+          <td align="right">
+            First Name
+          </td>
+          <td>
+            <input type="text" name="fname" id="fname" />
+          </td>
+        </tr>
+		
+        <tr>
+          <td align="right">
+            Last Name
+          </td>
+          <td>
+            <input type="text" name="lname" id="lname" />
+          </td>
+        </tr>
+		
+		 <tr>
+          <td align="right">
+            Password
+          </td>
+          <td>
+            <input type="password" name="pwd" id="pwd" />
+          </td>
+        </tr>
+		
+        <tr>
+          <td align="right">
+            Email
+          </td>
+          <td>
+            <input type="text" name="email" id="email" />
+          </td>
+        </tr>
+		
+        <tr>
+          <td align="right">
+            Phone
+          </td>
+          <td>
+            <input type="number" name="phone" />
+          </td>
+        </tr>
+		
+        <tr>
+          <td align="right">
+            Address
+          </td>
+          <td>
+            <textarea style="resize:none" cols="16" rows="5" name="address"></textarea>
+          </td>
+        </tr>
+		
+        <tr>
+          <td align="right">
+            Country
+          </td>
+          <td>
+            <select name="country" style="width:180px;">
+			<option value="">--Select Country--</option>
+            <option value="008">Albania</option>
+            <option value="012">India</option>
+            <option value="016">American Samoa</option>
+            <option value="020">Andorra</option>
+            <option value="024">Angola</option>
+            <option value="660">Anguilla</option>
+            <option value="010">Antarctica</option>
+            <option value="028">Antigua And Barbuda</option>
+            <option value="032">Argentina</option>
+            <option value="051">Armenia</option>
+            <option value="533">Aruba</option>
+			</select>
+          </td>
+        </tr>
+		
+        <tr>
+          <td align="right"></td>
+          <td>
+            <input type="submit" value="Submit" />
+          </td>
+        </tr>
+		
+	
+		
+      </table>
+    </form>
+<script type="text/javascript">
+
+function validator()
+{
+var x=document.forms["myForm"]["fname"].value;
+if (x==null || x=="")
+{
+  alert("Please enter first name");
+  return false;
+}
+
+var checkOnlyChars=/^[A-Za-z]+$/;
+if(!x.match(checkOnlyChars))
+{
+		alert("Only chars are allowed");
+		return false;
+}
+var x=document.forms["myForm"]["lname"].value;
+if (x==null || x=="")
+{
+  alert("Please enter last name");
+  return false;
+}
+var checkOnlyChars=/^[A-Za-z]+$/;
+if(!x.match(checkOnlyChars))
+{
+		alert("Only chars are allowed");
+		return false;
+}
+if (x.length > 20)
+{
+  alert("Maximum length of name is 20");
+  return false;
+}  
+  
+var x=document.forms["myForm"]["email"].value;
+var at=x.indexOf("@");
+var dot = x.lastIndexOf(".");
+if(x.length>=50)
+{
+  alert("Please enter valid e-mail ID");
+  email.focus();
+  return false;
+}
+if (at<1 || dot<at+2 || dot+2>=x.length)
+  {
+  alert("Not a valid e-mail address");
+  return false;
+  }
+
+var x=document.forms["myForm"]["phone"].value;
+if (x.length > 11)
+{
+  alert("Maximum length of phone number is 11");
+  return false;
+}  
+
+var numericExpression = /^[0-9]+$/;
+if(!x.match(numericExpression))
+{
+	alert("Only numerics are allowed");
+	return false;
+}
+}
+</script>
+
+</body>
+</html>
+
+
+

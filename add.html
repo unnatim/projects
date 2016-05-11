@@ -1,0 +1,165 @@
+<html>
+<head>
+<title>Add Product</title>
+<style>
+
+body
+{
+background: -webkit-linear-gradient(top, rgba(255,0,0,0.1), rgba(255,0,0,0.5)); /* For Safari 5.1 to 6.0 */
+}
+
+
+#patch
+{
+background-color:black;	
+-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(255,255,255,0.2)));
+-webkit-transition: all 0.2s ease-in-out 0s;
+border: 1px solid #ad9c9c;
+border-radius: 6px 6px 6px 6px;
+}
+
+h1
+{
+color:white;
+}
+
+
+
+</style>
+</head>
+<body>
+<div id="patch">
+<img src="logo.jpg" height="60" width="150"><hr>
+<h1>&nbsp;&nbsp;Add Product</h1></div><br><br>
+
+<center>
+ <form action="addp.php" method='post' name="myForm" id="myForm" onSubmit="validator()" enctype="multipart/form-data">
+      <table cellspacing="2" cellpadding="2" border="1">
+	  
+        <tr>
+          <td align="left">
+            Product Name
+          </td>
+            <td>
+               <input type="text" name="pn" id="pn" />
+            </td>
+        </tr>
+		
+		<tr>
+          <td align="left">
+            City Name
+          </td>
+            <td>
+               <input type="text" name="cn" id="cn" />
+            </td>
+        </tr>
+		
+        <tr>
+          <td align="left">
+            Product type
+          </td>
+            <td>
+            <select name ="pt" id="pt" onchange="change()" style="width:180px;">
+			<option value="">---Select---</option>
+			<option value="Camera">Camera</option>
+			<option value="Mobile">Mobile</option>
+            </select>
+            </td>
+        </tr>
+		
+		<tr>
+          <td align="left">
+            Brand type
+          </td>
+            <td><div id="btcont">
+            <select id="bt" name="bt" style="width:180px;">
+			<option>Please select Brand Type</option>
+            </select></div>
+            </td>
+        </tr>
+	   
+	    <tr>
+	     <td align="left">
+	       Upload Image
+		  </td>
+		    <td>
+			   <input type="file" name="img" id="img"/>
+			</td>
+	    </tr>
+	   
+	    <tr>
+	     <td align="left">Product Desc</td>
+	       <td align="left"><textarea name="pd" id="pd" rows="5" cols="30"></textarea>
+		   </td>
+        </tr>		
+	   
+	    <tr>
+         <td align="left">
+            Product Cost
+         </td>
+          <td>
+             Rs. <input type="number" name="cost" id="cost" />
+          </td>
+        </tr><br>
+		
+	    <tr>
+         <td></td> <br>  
+          <td align="left">
+            <input type="submit" value="Add" />
+             &nbsp; &nbsp; &nbsp;<input type="reset" value="Reset">
+		  </td>
+        </tr>
+		
+      </table>
+    </form></center>
+	
+<script type="text/javascript">
+
+function change() 
+	{
+		var pt = document.getElementById('pt').value;
+		var btcont = document.getElementById('btcont');
+
+		if (pt=='Camera') 
+		{
+			var a= '<select id="bt" name="bt"><option value="">--Select---</option><option value="Canon">Canon</option><option value="Olympus">Olympus</option></select>';
+		}
+
+		else if (pt=='Mobile') 
+		{
+			var a = '<select id="bt" name="bt"><option value="">--Select---</option><option value="Motorola">Motorola</option><option value="Micromax">Micromax</option><option value="Sony">Sony</option><option value="Coolpad">Coolpad</option><option value="Samsung">Samsung</option><option value="Nokia">Nokia</option></select>';
+		}
+
+		btcont.innerHTML = a;
+	}
+                                      
+
+
+function validator()
+{
+var x=document.forms["myForm"]["pn"].value;
+if (x==null || x=="")
+{
+  alert("Please enter first name");
+  return false;
+}
+
+var checkOnlyChars=/^[A-Za-z]+$/;
+if(!x.match(checkOnlyChars))
+{
+		alert("Only chars are allowed");
+		return false;
+}
+
+if (x.length > 20)
+{
+  alert("Maximum length of name is 20");
+  return false;
+}  
+  
+
+}
+</script>
+
+</body>
+</html>

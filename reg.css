@@ -1,0 +1,82 @@
+
+
+body
+{
+background: -webkit-linear-gradient(top, rgba(255,0,0,0.1), rgba(255,0,0,0.5)); /* For Safari 5.1 to 6.0 */
+}
+
+
+#patch
+{
+background-color:black;	
+-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(255,255,255,0.2)));
+-webkit-transition: all 0.2s ease-in-out 0s;
+border: 1px solid #ad9c9c;
+border-radius: 6px 6px 6px 6px;
+}
+
+#one
+{
+background-color:black;
+font-family:Helvetica;
+font-size:20px;
+float:left;
+margin-top:0px;
+margin-left:10px;  
+}
+
+h1
+{
+color:#DC143C;
+}
+
+input 
+{
+    width: 60%;
+    font-size: 20px;
+    font-family: "TW Cen MT";
+    background: #FFFFFF; 
+    border-radius: 3px;
+    border:  1px solid black;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    transition:ease-out .1s;
+}
+input:focus
+{
+    background: #DC143C;
+    color: white;
+    box-shadow: 0 0 10px rgba(255,255,255,1); 
+}
+
+label
+{
+font-size:20px;
+}
+
+span
+{
+font-size:20px;
+}
+
+option
+{
+    font-size: 20px;
+    font-family: "TW Cen MT";
+    background: #FFFFFF; 
+    border-radius: 3px;
+    border:  1px solid black;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    transition:ease-out .1s;
+}
+
+select
+{
+    width: 40%;
+    font-size: 20px;
+    font-family: "TW Cen MT";
+    background: #FFFFFF; 
+    border-radius: 3px;
+    border:  1px solid black;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    transition:ease-out .1s;
+}

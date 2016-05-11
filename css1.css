@@ -1,0 +1,151 @@
+
+body
+{
+background: -webkit-linear-gradient(top, rgba(255,0,0,0.1), rgba(255,0,0,0.5)); /* For Safari 5.1 to 6.0 */
+}
+
+.outset 
+{
+float:right;
+margin-right:20px;
+margin-top:0px;
+border-style: outset;
+border-radius:10px;
+border-width:8px;
+border-color:#f2f2f2;
+}
+
+#images
+{
+float:left;
+left:20px;
+border-style: groove;
+border-color:black;
+-webkit-transition:all 1s ease-in-out;
+}
+
+.allinone:hover
+{
+background:no-repeat;
+margin-left: 150px;
+overflow:hidden;                      /*visible|hidden|scroll|auto|initial|inherit;*/
+-webkit-transform: scale(1.5,1.5) translate(2px, 2px);
+}
+
+.allinone1:hover
+{
+margin-left: 50px;
+overflow:hidden;
+-webkit-transform: scale(1.5,1.5) translate(2px, 2px);
+}
+
+.allinone2:hover
+{
+margin-left: 150px;
+overflow:hidden;
+-webkit-transform: scale(1.5,1.5) translate(2px, 2px);
+}
+
+#images1
+{
+border-style: groove;
+border-color:black;
+position:absolute;
+left:260px;
+top:300px;
+-webkit-transition:all 1s ease-in-out;
+}
+
+#images2
+{
+position:absolute;
+border-style: groove;
+border-color:black;	
+left:455px;
+top:195px;
+-webkit-transition:all 1s ease-in-out;
+}
+
+
+
+.fontt
+{
+font-family: Helvetica;
+color: black;
+}
+
+#in
+{
+font-size:15px;
+height:10px;
+width:200px;
+}
+
+.resize
+{ 
+border-style: ridge;
+padding: 10px 15px; 
+line-height: 25px; 
+}
+
+::-webkit-input-placeholder 
+{
+font-size: 15px;
+color: #d0cdfa;
+}
+
+.button1 
+{
+	padding: 12px 25px;
+    background-color:  #ff4d4d;
+    -webkit-border-radius: 4px;
+   box-shadow:5px 5px 5px gray;
+   margin-left:40px;
+   font-size:15px;
+   color:white;
+   margin-top:10px;
+}
+
+#effect
+{
+margin-top:10px;
+padding-bottom:10px;
+padding-left:5px;	
+padding-right:5px;	
+background-color:pink;	
+   border-style: groove;
+   border-width:1px;
+   border-color:gray;
+   border-radius:3px;
+}
+
+#patch
+{
+background-color:black;	
+-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(255,255,255,0.2)));
+-webkit-transition: all 0.2s ease-in-out 0s;
+border: 1px solid #ad9c9c;
+border-radius: 6px 6px 6px 6px;
+}
+
+#one
+{
+background-color:black;
+font-family:Helvetica;
+font-size:20px;
+float:left;
+margin-top:0px;
+margin-left:10px;  
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+
+body
+{
+background: -webkit-linear-gradient(top, rgba(255,0,0,0.1), rgba(255,0,0,0.5)); /* For Safari 5.1 to 6.0 */
+
+}
+
+.button
+{
+	background-color:#b3b3b3;
+    border-radius:24px;
+	border-style: outset;
+	border-width:2px;
+    font-family: 'Oswald';
+    font-size: 20px;
+    cursor: pointer;
+    border-color:black;
+	width: 120px; 
+	padding: 10px;
+}
+
+.button:hover 
+{
+    background:#b3b3b3;
+    box-shadow: 0px 0px 15px #FFF;
+}
+
+#images
+{
+float:left;
+padding:20px;
+border:2px solid;
+border-color:black;
+margin-left:100;
+display:block;
+}
+
+#patch
+{
+background-color:black;	
+-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(255,255,255,0.2)));
+-webkit-transition: all 0.2s ease-in-out 0s;
+border: 1px solid #ad9c9c;
+border-radius: 6px 6px 6px 6px;
+}
+
+#one
+{
+background-color:black;
+font-family:Helvetica;
+font-size:20px;
+float:left;
+margin-top:0px;
+margin-left:10px;  
+}
+
+
+
+
+
+
+
+
+
+
